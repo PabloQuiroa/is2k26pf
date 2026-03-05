@@ -44,8 +44,8 @@ namespace CapaVista_Citas
                 };
 
 
-            int id_aplicacion = 301;
-            int id_Modulo = 4;
+            int id_aplicacion = 5006;
+            int id_Modulo = 1;
             navegador1.IPkId_Aplicacion = id_aplicacion;
             navegador1.IPkId_Modulo = id_Modulo;
             navegador1.configurarDataGridView(config);
