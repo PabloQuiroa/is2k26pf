@@ -275,5 +275,21 @@ namespace Capa_vista_Emision_pasaporte
             }
 
         }
+
+        public void recibirFirma(Image firmaCapturada)
+        {
+            if (firmaCapturada != null)
+            {
+                pbFirma.Image = new Bitmap(firmaCapturada);
+
+                pbFirma.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+        }
+
+        private void btn_Firma_Click(object sender, EventArgs e)
+        {
+            Frm_Firma frm = new Frm_Firma();
+            frm.Show();
+        }
     }
 }

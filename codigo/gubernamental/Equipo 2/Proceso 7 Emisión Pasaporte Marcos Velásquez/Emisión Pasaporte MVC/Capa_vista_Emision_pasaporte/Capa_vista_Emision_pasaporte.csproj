@@ -53,7 +53,9 @@
     <Reference Include="QuestPDF, Version=2026.2.2.0, Culture=neutral, PublicKeyToken=0f3c2b2315ff52c8, processorArchitecture=MSIL">
       <HintPath>..\packages\QuestPDF.2026.2.2\lib\netstandard2.0\QuestPDF.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -76,6 +78,12 @@
     <Compile Include="Frm_emision_pasaporte.Designer.cs">
       <DependentUpon>Frm_emision_pasaporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Firma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Firma.Designer.cs">
+      <DependentUpon>Frm_Firma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_fotografia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_emision_pasaporte.resx">
       <DependentUpon>Frm_emision_pasaporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Firma.resx">
+      <DependentUpon>Frm_Firma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_fotografia.resx">
       <DependentUpon>Frm_fotografia.cs</DependentUpon>
