@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    Autor: Diego Andre Monterroso Rabarique
+    Mantenimiento: Frm_Mantenimiento_Tipo_Tramite
+    Descripción: Mantenimiento tipo tramite con parametros con navegador
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

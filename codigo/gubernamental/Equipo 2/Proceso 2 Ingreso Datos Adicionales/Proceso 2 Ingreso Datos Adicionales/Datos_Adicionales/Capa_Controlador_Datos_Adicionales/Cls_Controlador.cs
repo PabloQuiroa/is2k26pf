@@ -12,7 +12,7 @@ namespace Capa_Controlador
     public class Cls_Controlador_DatosAdicionales
     {
         // =============================
-        // Variable global (g)
+        // Variables globales (g)
         // =============================
         private Cls_Conexion gObjConexion;
         private Cls_Sentencias_DatosAdicionales gObjSentencias;
@@ -39,7 +39,7 @@ namespace Capa_Controlador
 
                 if (bResultado)
                 {
-                    gObjConexion.funCerrarConexion(out string sCerrarMensaje);
+                    gObjConexion.funCerrarConexion(out _);
                 }
 
                 return bResultado;

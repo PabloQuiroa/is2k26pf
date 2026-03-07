@@ -1,7 +1,7 @@
 ﻿/*
-    Autor: Richard Anthony de León Milian 0901-22-10245
+    Autor: Diego Andre Monterroso Rabarique
     Clase: Cls_Conexion
-    Descripción: Manejo de conexión ODBC por DSN "bd_migracion"
+    Descripción: Conexion para conectarse con la base de datos
 */
 
 using System;

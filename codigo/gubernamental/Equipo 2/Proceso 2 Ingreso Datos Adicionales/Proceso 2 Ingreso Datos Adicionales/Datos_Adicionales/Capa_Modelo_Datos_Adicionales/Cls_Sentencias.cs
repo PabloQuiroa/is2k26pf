@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+    Autor: Diego Andre Monterroso Rabarique
+    Clase: Cls_Sentencias_DatosAdicionales
+    Descripción: Sentencias para manejar datos adicionales del solicitante
+*/
+
+using System;
 using System.Data.Odbc;
 
 namespace Capa_Modelo_Datos_Adicionales
@@ -7,7 +13,9 @@ namespace Capa_Modelo_Datos_Adicionales
     {
         private Cls_Conexion gObjConexion = new Cls_Conexion();
 
+        // =============================
         // INSERTAR
+        // =============================
         public bool funInsertarDatosAdicionales(
             int iSolicitanteId,
             int iTipoTramiteId,
@@ -25,12 +33,14 @@ namespace Capa_Modelo_Datos_Adicionales
             try
             {
                 string sSql = @"INSERT INTO tbl_datos_adicionales_solicitante
-                                (fk_solicitante_id,
-                                 fk_tipo_tramite_id,
-                                 fk_tipo_atencion_id,
-                                 Cmp_Domicilio,
-                                 Cmp_Cantidad_Personas,
-                                 Cmp_Informacion_Viaje)
+                                (
+                                    fk_solicitante_id,
+                                    fk_tipo_tramite_id,
+                                    fk_tipo_atencion_id,
+                                    Cmp_Domicilio,
+                                    Cmp_Cantidad_Personas,
+                                    Cmp_Informacion_Viaje
+                                )
                                 VALUES (?, ?, ?, ?, ?, ?)";
 
                 using (OdbcCommand cmd = new OdbcCommand(sSql, gObjConexion.funObtenerConexion()))
@@ -49,10 +59,12 @@ namespace Capa_Modelo_Datos_Adicionales
                         sMensaje = "Datos adicionales guardados correctamente.";
                         return true;
                     }
+                    else
+                    {
+                        sMensaje = "No se pudo insertar el registro.";
+                        return false;
+                    }
                 }
-
-                sMensaje = "No se pudo insertar el registro.";
-                return false;
             }
             catch (Exception ex)
             {
@@ -65,7 +77,9 @@ namespace Capa_Modelo_Datos_Adicionales
             }
         }
 
+        // =============================
         // MODIFICAR
+        // =============================
         public bool funModificarDatosAdicionales(
             int iDatosAdicionalesId,
             string sDomicilio,
@@ -97,10 +111,12 @@ namespace Capa_Modelo_Datos_Adicionales
                         sMensaje = "Registro modificado correctamente.";
                         return true;
                     }
+                    else
+                    {
+                        sMensaje = "No se pudo modificar el registro.";
+                        return false;
+                    }
                 }
-
-                sMensaje = "No se pudo modificar.";
-                return false;
             }
             catch (Exception ex)
             {
@@ -113,7 +129,9 @@ namespace Capa_Modelo_Datos_Adicionales
             }
         }
 
+        // =============================
         // ELIMINAR
+        // =============================
         public bool funEliminarDatosAdicionales(
             int iDatosAdicionalesId,
             out string sMensaje)
@@ -139,10 +157,12 @@ namespace Capa_Modelo_Datos_Adicionales
                         sMensaje = "Registro eliminado correctamente.";
                         return true;
                     }
+                    else
+                    {
+                        sMensaje = "No se pudo eliminar el registro.";
+                        return false;
+                    }
                 }
-
-                sMensaje = "No se pudo eliminar.";
-                return false;
             }
             catch (Exception ex)
             {
