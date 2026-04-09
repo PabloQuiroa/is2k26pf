@@ -33,12 +33,14 @@ namespace Mantenimiento_tipo_MOV_inv
             string[] columnas = {
                 "tbl_tipo_movimiento_inventario",
                 "pk_tipo_movimiento_id",
+                "nombre_tipo_inv",
                 "efecto",
                 "estado"
             };
 
             string[] sEtiquetas = {
                 "ID tipo Movimiento",
+                "Nombre Movimiento",
                 "Efecto",
                 "Estado"
             };

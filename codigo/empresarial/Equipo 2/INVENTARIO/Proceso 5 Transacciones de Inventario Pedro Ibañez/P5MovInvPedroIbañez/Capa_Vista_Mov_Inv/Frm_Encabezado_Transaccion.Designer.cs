@@ -33,6 +33,9 @@ namespace Capa_Vista_Mov_Inv
             this.BTN_LIMPIAR_ENCABEZADO = new System.Windows.Forms.Button();
             this.Btn_Salir = new System.Windows.Forms.Button();
             this.GB_Detalle = new System.Windows.Forms.GroupBox();
+            this.Lbl_Cantidad = new System.Windows.Forms.Label();
+            this.Cbo_ID_Inventario = new System.Windows.Forms.ComboBox();
+            this.Lbl_Inventario = new System.Windows.Forms.Label();
             this.BTN_LIMPIAR_DETALE = new System.Windows.Forms.Button();
             this.Btn_Remover_Detalle = new System.Windows.Forms.Button();
             this.Btn_Agregar_Detalle = new System.Windows.Forms.Button();
@@ -44,6 +47,7 @@ namespace Capa_Vista_Mov_Inv
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.Btn_Agregar_Movimiento = new System.Windows.Forms.Button();
             this.GB_ENCABEZADO = new System.Windows.Forms.GroupBox();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.Cbo_Id_Movimiento = new System.Windows.Forms.ComboBox();
             this.DTP_FECHA_Movimiento = new System.Windows.Forms.DateTimePicker();
             this.CBO_ID_Tipo_Movimiento = new System.Windows.Forms.ComboBox();
@@ -53,15 +57,12 @@ namespace Capa_Vista_Mov_Inv
             this.Lbl_IDMovInv = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_descripcion = new System.Windows.Forms.TextBox();
-            this.Cbo_ID_Inventario = new System.Windows.Forms.ComboBox();
-            this.Lbl_Inventario = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Lbl_Cantidad = new System.Windows.Forms.Label();
+            this.NumUpDwn_CantidadMovida = new System.Windows.Forms.NumericUpDown();
             this.GB_Detalle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_DETALLE_MOVIMIENTO)).BeginInit();
             this.GB_ENCABEZADO.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumUpDwn_CantidadMovida)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_LIMPIAR_ENCABEZADO
@@ -90,7 +91,7 @@ namespace Capa_Vista_Mov_Inv
             // 
             // GB_Detalle
             // 
-            this.GB_Detalle.Controls.Add(this.comboBox1);
+            this.GB_Detalle.Controls.Add(this.NumUpDwn_CantidadMovida);
             this.GB_Detalle.Controls.Add(this.Lbl_Cantidad);
             this.GB_Detalle.Controls.Add(this.Cbo_ID_Inventario);
             this.GB_Detalle.Controls.Add(this.Lbl_Inventario);
@@ -105,6 +106,34 @@ namespace Capa_Vista_Mov_Inv
             this.GB_Detalle.TabIndex = 27;
             this.GB_Detalle.TabStop = false;
             this.GB_Detalle.Text = "DETALLE";
+            // 
+            // Lbl_Cantidad
+            // 
+            this.Lbl_Cantidad.AutoSize = true;
+            this.Lbl_Cantidad.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Cantidad.Location = new System.Drawing.Point(418, 116);
+            this.Lbl_Cantidad.Name = "Lbl_Cantidad";
+            this.Lbl_Cantidad.Size = new System.Drawing.Size(112, 16);
+            this.Lbl_Cantidad.TabIndex = 15;
+            this.Lbl_Cantidad.Text = "Cantidad Movida:";
+            // 
+            // Cbo_ID_Inventario
+            // 
+            this.Cbo_ID_Inventario.FormattingEnabled = true;
+            this.Cbo_ID_Inventario.Location = new System.Drawing.Point(148, 111);
+            this.Cbo_ID_Inventario.Name = "Cbo_ID_Inventario";
+            this.Cbo_ID_Inventario.Size = new System.Drawing.Size(162, 27);
+            this.Cbo_ID_Inventario.TabIndex = 14;
+            // 
+            // Lbl_Inventario
+            // 
+            this.Lbl_Inventario.AutoSize = true;
+            this.Lbl_Inventario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Inventario.Location = new System.Drawing.Point(17, 116);
+            this.Lbl_Inventario.Name = "Lbl_Inventario";
+            this.Lbl_Inventario.Size = new System.Drawing.Size(85, 16);
+            this.Lbl_Inventario.TabIndex = 13;
+            this.Lbl_Inventario.Text = "Id Inventario:";
             // 
             // BTN_LIMPIAR_DETALE
             // 
@@ -232,6 +261,14 @@ namespace Capa_Vista_Mov_Inv
             this.GB_ENCABEZADO.TabStop = false;
             this.GB_ENCABEZADO.Text = "ENCABEZADO";
             // 
+            // txt_descripcion
+            // 
+            this.txt_descripcion.Location = new System.Drawing.Point(20, 141);
+            this.txt_descripcion.MinimumSize = new System.Drawing.Size(4, 80);
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(645, 26);
+            this.txt_descripcion.TabIndex = 9;
+            // 
             // Cbo_Id_Movimiento
             // 
             this.Cbo_Id_Movimiento.FormattingEnabled = true;
@@ -315,55 +352,18 @@ namespace Capa_Vista_Mov_Inv
             this.label1.TabIndex = 1;
             this.label1.Text = "Movimiento De Inventario";
             // 
-            // txt_descripcion
+            // NumUpDwn_CantidadMovida
             // 
-            this.txt_descripcion.Location = new System.Drawing.Point(20, 141);
-            this.txt_descripcion.MinimumSize = new System.Drawing.Size(0, 80);
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(645, 80);
-            this.txt_descripcion.TabIndex = 9;
-            // 
-            // Cbo_ID_Inventario
-            // 
-            this.Cbo_ID_Inventario.FormattingEnabled = true;
-            this.Cbo_ID_Inventario.Location = new System.Drawing.Point(148, 111);
-            this.Cbo_ID_Inventario.Name = "Cbo_ID_Inventario";
-            this.Cbo_ID_Inventario.Size = new System.Drawing.Size(162, 27);
-            this.Cbo_ID_Inventario.TabIndex = 14;
-            // 
-            // Lbl_Inventario
-            // 
-            this.Lbl_Inventario.AutoSize = true;
-            this.Lbl_Inventario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Inventario.Location = new System.Drawing.Point(17, 116);
-            this.Lbl_Inventario.Name = "Lbl_Inventario";
-            this.Lbl_Inventario.Size = new System.Drawing.Size(85, 16);
-            this.Lbl_Inventario.TabIndex = 13;
-            this.Lbl_Inventario.Text = "Id Inventario:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(549, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 27);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // Lbl_Cantidad
-            // 
-            this.Lbl_Cantidad.AutoSize = true;
-            this.Lbl_Cantidad.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Cantidad.Location = new System.Drawing.Point(418, 116);
-            this.Lbl_Cantidad.Name = "Lbl_Cantidad";
-            this.Lbl_Cantidad.Size = new System.Drawing.Size(112, 16);
-            this.Lbl_Cantidad.TabIndex = 15;
-            this.Lbl_Cantidad.Text = "Cantidad Movida:";
+            this.NumUpDwn_CantidadMovida.Location = new System.Drawing.Point(545, 111);
+            this.NumUpDwn_CantidadMovida.Name = "NumUpDwn_CantidadMovida";
+            this.NumUpDwn_CantidadMovida.Size = new System.Drawing.Size(120, 26);
+            this.NumUpDwn_CantidadMovida.TabIndex = 17;
             // 
             // Frm_Encabezado_Transaccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 924);
+            this.ClientSize = new System.Drawing.Size(861, 881);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BTN_LIMPIAR_ENCABEZADO);
             this.Controls.Add(this.Btn_Salir);
@@ -384,6 +384,7 @@ namespace Capa_Vista_Mov_Inv
             this.GB_ENCABEZADO.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumUpDwn_CantidadMovida)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,9 +415,9 @@ namespace Capa_Vista_Mov_Inv
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_descripcion;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label Lbl_Cantidad;
         private System.Windows.Forms.ComboBox Cbo_ID_Inventario;
         private System.Windows.Forms.Label Lbl_Inventario;
+        private System.Windows.Forms.NumericUpDown NumUpDwn_CantidadMovida;
     }
 }

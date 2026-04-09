@@ -118,5 +118,11 @@ namespace Capa_Vista_Logista
             Frm_Pagos pagos = new Frm_Pagos();
             pagos.ShowDialog();
         }
+
+        private void movimientoDeInventariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Encabezado_Transaccion Trans = new Frm_Encabezado_Transaccion();
+            Trans.ShowDialog();
+        }
     }
 }
