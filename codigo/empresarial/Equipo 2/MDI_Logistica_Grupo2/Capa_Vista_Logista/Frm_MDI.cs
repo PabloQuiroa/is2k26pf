@@ -180,5 +180,29 @@ namespace Capa_Vista_Logista
             Frm_Devolucion devolucion = new Frm_Devolucion();
             devolucion.ShowDialog();
         }
+
+        private void trasnportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Transporte tipo_Transporte = new Frm_Tipo_Transporte();
+            tipo_Transporte.ShowDialog();
+        }
+
+        private void entregaDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Entrega_Produccion entrega_Produccion = new Frm_Entrega_Produccion();
+            entrega_Produccion.ShowDialog();
+        }
+
+        private void entregaDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Entrega_Venta entrega_Venta = new Frm_Entrega_Venta();
+            entrega_Venta.ShowDialog();
+        }
+
+        private void entregaDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Entrega_Compra entrega_Compra = new Frm_Entrega_Compra();
+            entrega_Compra.ShowDialog();
+        }
     }
 }
