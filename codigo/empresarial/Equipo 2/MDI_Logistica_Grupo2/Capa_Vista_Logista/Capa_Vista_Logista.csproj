@@ -32,12 +32,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Capa_Controlador_Navegador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Capa_Controlador_Seguridad">
       <HintPath>..\..\..\..\componentes\seguridad\SeguridadMVC\SeguridadMVC\CapaControlador\bin\Debug\Capa_Controlador_Seguridad.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Modelo_Seguridad, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Capa_Vista_Bodegaa">
       <HintPath>..\..\DISTRIBUCION\Proceso4-Bodega-Richard-de-Leon\P4BodegaRichardDeLeon\Capa_Vista_Bodegaa\bin\Debug\Capa_Vista_Bodegaa.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Vista_Componente_Consultas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Capa_Vista_Compras">
       <HintPath>..\..\COMPRAS\Proceso 2 compras Danilo\Compras\Capa_Vista_Compras\bin\Debug\Capa_Vista_Compras.dll</HintPath>
     </Reference>
@@ -63,6 +66,10 @@
     </Reference>
     <Reference Include="Capa_Vista_Mov_Inv">
       <HintPath>..\..\INVENTARIO\Proceso 5 Transacciones de Inventario Pedro Ibañez\P5MovInvPedroIbañez\Capa_Vista_Mov_Inv\bin\Debug\Capa_Vista_Mov_Inv.dll</HintPath>
+    </Reference>
+    <Reference Include="Capa_Vista_Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Capa_Vista_Navegador.dll</HintPath>
     </Reference>
     <Reference Include="Capa_Vista_OrdenDetalle">
       <HintPath>..\..\PRODUCCION\Orden_Produccion_Detalle\Capa_Vista_OrdenDetalle\bin\Debug\Capa_Vista_OrdenDetalle.dll</HintPath>
@@ -105,6 +112,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Carros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Carros.Designer.cs">
+      <DependentUpon>Frm_Carros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,23 +130,45 @@
     <Compile Include="Frm_MDI.Designer.cs">
       <DependentUpon>Frm_MDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Productos.Designer.cs">
+      <DependentUpon>Frm_Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Rpt_producto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_producto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_Carros.resx">
+      <DependentUpon>Frm_Carros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_LOGIN.resx">
       <DependentUpon>Frm_LOGIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MDI.resx">
       <DependentUpon>Frm_MDI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Productos.resx">
+      <DependentUpon>Frm_Productos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_producto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_producto.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transporte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

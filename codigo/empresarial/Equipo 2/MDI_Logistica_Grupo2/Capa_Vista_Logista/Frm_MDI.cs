@@ -231,5 +231,17 @@ namespace Capa_Vista_Logista
             Frm_Compras_CXP compras = new Frm_Compras_CXP();
             compras.ShowDialog();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Productos productos = new Frm_Productos();
+            productos.ShowDialog();
+        }
+
+        private void carrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Carros carros = new Frm_Carros();
+            carros.ShowDialog();
+        }
     }
 }
