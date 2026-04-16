@@ -243,5 +243,11 @@ namespace Capa_Vista_Logista
             Frm_Carros carros = new Frm_Carros();
             carros.ShowDialog();
         }
+
+        private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Vendedores vendedores = new Frm_Vendedores();
+            vendedores.ShowDialog();
+        }
     }
 }
